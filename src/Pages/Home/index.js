@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, View, Text, StyleSheet, Image, TextInput } from "react-native";
+import { TouchableOpacity, View, Text, StyleSheet, Image, TextInput, KeyboardAvoidingView, Pressable } from "react-native";
 import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from "@react-navigation/native";
@@ -45,13 +45,13 @@ export default function Home(){
                     <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
                         <Text style={styles.btnText}>LOGIN</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text style={styles.forgot}>Forgot Password?</Text>
-                    </TouchableOpacity>
+                    <Pressable>
+                        <Text style={[styles.forgot, styles.buttonOpen]}>Forgot Password?</Text>
+                    </Pressable>
                 </View>
                 <View style={styles.footer}>
                     <Text style={[styles.forgot, {fontSize: 15}]}>Don't have an account?</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Create')}>
                             <Text style={styles.forgot}>Sign Up</Text>
                         </TouchableOpacity>
                     
@@ -102,9 +102,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingLeft: 10,
+        paddingTop: 5,
         borderRadius: 50,
         borderWidth: 1,
-        borderColor: '#483D8B'
+        borderColor: '#17f2de'
     },
     cardSeparator: {
         width: 250,
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
         height: 40,
         fontSize: 20,
         paddingLeft: 10,
-        color: 'white'
+        color: 'white',
     },
     loginButton: {
         height: 90,
