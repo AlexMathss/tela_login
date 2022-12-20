@@ -8,8 +8,8 @@ export default function App() {
   return (
     <NavigationContainer>
       
-        <StatusBar backgroundColor="#38A69D" barStyle="dark-content"/>
-        <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+        <StatusBar backgroundColor="#38A69D" barStyle="light-content"/>
+        <SafeAreaView style={{flex: 1, backgroundColor: 'rgba(12,10,18,0.9)'}}>
           <Routes/>
         </SafeAreaView>
        

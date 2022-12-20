@@ -9,7 +9,7 @@ export default function Home(){
     const navigation = useNavigation();
     return(
         <Animatable.View animation="fadeInUp" delay={600}
-        style={styles.container}>
+            style={styles.container}>
             <Image source={require('../../../assets/loginbg.png')} style={styles.cardImg}/>
             <View style={styles.containerCadastro}>
                 <View style={styles.containerTitle}>

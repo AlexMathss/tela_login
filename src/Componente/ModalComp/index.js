@@ -15,7 +15,7 @@ export default function ModalComp(){
                 }}
             >
             
-                <View style={styles.centeredView}>
+                <View style={[styles.centeredView, {backgroundColor: 'rgba(12,10,18,0.9)'}]}>
                     <View style={styles.modalView}>
                         <Text style={styles.modalText}>Preencha as informações</Text>
                         <View style={styles.cardInput}>
@@ -32,16 +32,16 @@ export default function ModalComp(){
                         </View>
                         <View style={styles.btns}>
                             <Pressable
-                                style={[styles.button, {backgroundColor: '#3CB371'}]}
+                                style={[styles.buttonModal, {backgroundColor: '#3CB371'}]}
                                 onPress={() => setModalVisible(!modalVisible)}
                             >
-                                <Text style={styles.textStyle}>Confirmar</Text>
+                                <Text style={[styles.textStyle, {color: 'white'}]}>Confirmar</Text>
                             </Pressable>
                             <Pressable
-                            style={[styles.button, {backgroundColor: '#B22222'}]}
+                            style={[styles.buttonModal, {backgroundColor: '#B22222'}]}
                             onPress={() => setModalVisible(!modalVisible)}
                         >
-                            <Text style={styles.textStyle}>Cancelar</Text>
+                            <Text style={[styles.textStyle, {color: 'white'}]}>Cancelar</Text>
                         </Pressable>
                         </View>
                     </View>
@@ -58,67 +58,75 @@ export default function ModalComp(){
 }
 
 const styles = StyleSheet.create({
-    centeredView: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      },
-      modalView: {
-        margin: 20,
-        width: 350,
-        height: 400,
-        backgroundColor: "white",
-        borderRadius: 20,
-        alignItems: "center",
-        justifyContent: 'space-between',
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 2
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
-        paddingTop: 10,
-        paddingBottom: 10
-      },
-      button: {
-        borderRadius: 20,
-        elevation: 2
-      },
-      buttonOpen: {
-        backgroundColor: "#F194FF",
-      },
-      buttonClose: {
-        backgroundColor: "#2196F3",
-      },
-      textStyle: {
-        color: "#6c63ff",
-        fontWeight: "bold",
-        textAlign: "center"
-      },
-      modalText: {
-        marginBottom: 15,
-        textAlign: "center",
-        fontSize: 25,
-        fontWeight: 'bold'
-      },
-      inputText: {
-        width: '100%',
-        height: '40%',
-        backgroundColor:'rgba(12,10,18,0.9)',
-        paddingLeft: 10,
-        borderRadius: 10,
-        color: '#FFF'
-      },
-      cardInput: {
-        width: '90%',
-        height: '30%',
-        justifyContent: 'space-between'
-      },
-      btns: {
-        width: '90%',
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-      }
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    margin: 20,
+    width: 350,
+    height: 400,
+    backgroundColor: '#6c63ff',
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: 'space-between',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+  button: {
+    borderRadius: 20,
+    elevation: 2
+  },
+  buttonModal: {
+    width: 130,
+    height: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 20
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+  },
+  textStyle: {
+    color: "#6c63ff",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center",
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: '#FFF'
+  },
+  inputText: {
+    width: '100%',
+    height: '40%',
+    backgroundColor:'rgba(12,10,18,0.9)',
+    paddingLeft: 10,
+    borderRadius: 10,
+    color: '#FFF'
+  },
+  cardInput: {
+    width: '90%',
+    height: '30%',
+    justifyContent: 'space-between'
+  },
+  btns: {
+    width: '90%',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
 })

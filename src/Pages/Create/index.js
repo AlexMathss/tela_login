@@ -10,7 +10,8 @@ import { useNavigation } from "@react-navigation/native";
 export default function Create(){
     const navigation = useNavigation();
     return(
-        <Animatable.View animation="fadeInUp" style={styles.container}>
+        <View style={{backgroundColor: 'rgba(12,10,18,0.9)'}}>
+        <Animatable.View animation="fadeInLeft" style={styles.container}>
             <View style={styles.backIcon}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btnBack}>
                     <Image source={require('../../../assets/arrowp.png')} style={{width: 40, height: 40}}/>
@@ -74,6 +75,7 @@ export default function Create(){
             </View>
 
         </Animatable.View>
+        </View>
     )
 }
 
