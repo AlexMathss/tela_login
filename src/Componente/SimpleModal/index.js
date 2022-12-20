@@ -22,8 +22,8 @@ const createButtonAlert = () => {
         ]
     )
 }
-
     return(
+        
         <TouchableOpacity
             disabled={true}
             style={styles.container}
@@ -39,6 +39,7 @@ const createButtonAlert = () => {
                         placeholder="Confirme seu e-mail"
                         placeholderTextColor="black"
                         style={styles.inputSize}
+                        testID='confirm'
                     />
                 </View>
                 <View style={styles.buttonsView}>
@@ -106,3 +107,7 @@ const styles = StyleSheet.create({
 });
 
 export {SimpleModal}
+
+
+// Anotações
+// - Realizar autenticação para verificar se os campos do e-mail estão preenchidos e ativar o botão.

@@ -1,10 +1,9 @@
 import React from "react";
-import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Image, TextInput} from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 // import StepModal from "react-native-step-modal";
 
 import * as Animatable from 'react-native-animatable';
-import Confirm from "../../Componente/Confirm";
 
 export default function Login(){
     const navigation = useNavigation();
@@ -34,9 +33,6 @@ export default function Login(){
                     <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btn}>
                         <Text style={styles.btnText}>Tela de Login</Text>
                     </TouchableOpacity>
-
-                    
-                    
                 </View>
                 
             </Animatable.View>

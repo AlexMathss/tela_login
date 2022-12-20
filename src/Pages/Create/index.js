@@ -11,7 +11,8 @@ export default function Create(){
     const navigation = useNavigation();
     return(
         <View style={{backgroundColor: 'rgba(12,10,18,0.9)'}}>
-        <Animatable.View animation="fadeInLeft" style={styles.container}>
+        <Animatable.View animation="fadeInLeft" >
+        <KeyboardAvoidingView style={styles.container} behavior='padding'>
             <View style={styles.backIcon}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btnBack}>
                     <Image source={require('../../../assets/arrowp.png')} style={styles.btnImg}/>
@@ -73,7 +74,7 @@ export default function Create(){
                     
                 </View>
             </View>
-
+        </KeyboardAvoidingView>
         </Animatable.View>
         </View>
     )
