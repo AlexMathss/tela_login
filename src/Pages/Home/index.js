@@ -4,6 +4,7 @@ import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from "@react-navigation/native";
 import ModalComp from "../../Componente/ModalComp";
+import Confirm from "../../Componente/Confirm";
 
 export default function Home(){
     const navigation = useNavigation();
@@ -47,7 +48,7 @@ export default function Home(){
                     <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
                         <Text style={styles.btnText}>LOGIN</Text>
                     </TouchableOpacity>
-                    <ModalComp/>
+                    <Confirm/>
                 </View>
                 <View style={styles.footer}>
                     <Text style={[styles.forgot, {fontSize: 15}]}>Don't have an account?</Text>
@@ -139,7 +140,8 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 50,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginBottom: 10
     },
     btnText: {
         fontSize: 17,
