@@ -13,7 +13,7 @@ export default function Create(){
         <Animatable.View animation="fadeInUp" style={styles.container}>
             <View style={styles.backIcon}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btnBack}>
-                    <Image source={require('../../../assets/left.png')} style={{width: 40, height: 40}}/>
+                    <Image source={require('../../../assets/arrowp.png')} style={{width: 40, height: 40}}/>
                 </TouchableOpacity>
             </View>
 
@@ -66,7 +66,7 @@ export default function Create(){
                 </TouchableOpacity>
                 <View style={styles.footer}>
                     <Text style={[styles.forgot, {fontSize: 15, color: '#FFF'}]}>Already hava a acoount? </Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('Create')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                         <Text style={styles.forgot}>Sign In</Text>
                     </TouchableOpacity>
                     
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         borderRadius: 15,
         borderWidth: 1,
-        borderColor: '#17f2de'
+        borderColor: '#6c63ff'
     },
     cardSeparator: {
         width: 320,
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     btn: {
-        backgroundColor: '#17f2de',
+        backgroundColor: '#6c63ff',
         width: 150,
         height: 50,
         borderRadius: 50,
@@ -157,7 +157,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     btnText: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: '#FFF'
     },
     footer: {
         height: 40,
@@ -167,7 +168,7 @@ const styles = StyleSheet.create({
     },
     forgot: {
         fontSize: 15,
-        color: '#17f2de',
+        color: '#6c63ff',
         fontWeight: '600'
     }
 })

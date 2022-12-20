@@ -3,6 +3,7 @@ import { TouchableOpacity, View, Text, StyleSheet, Image, TextInput, KeyboardAvo
 import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from "@react-navigation/native";
+import ModalComp from "../../Componente/ModalComp";
 
 export default function Home(){
     const navigation = useNavigation();
@@ -29,7 +30,7 @@ export default function Home(){
                         
                     </View>
                     <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/password.png')} style={{width: 40, height: 40}}/>
+                        <Image source={require('../../../assets/lock.png')} style={{width: 40, height: 40}}/>
                         <View style={styles.cardSeparator}>
                             <Text style={styles.titleSeparator}>Password</Text>
                             <TextInput
@@ -41,20 +42,19 @@ export default function Home(){
                         </View>
                     </View>                   
                 </View>
+                
                 <View style={styles.loginButton}>
                     <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
                         <Text style={styles.btnText}>LOGIN</Text>
                     </TouchableOpacity>
-                    <Pressable>
-                        <Text style={[styles.forgot, styles.buttonOpen]}>Forgot Password?</Text>
-                    </Pressable>
+                    <ModalComp/>
                 </View>
                 <View style={styles.footer}>
                     <Text style={[styles.forgot, {fontSize: 15}]}>Don't have an account?</Text>
                         <TouchableOpacity onPress={() => navigation.navigate('Create')}>
                             <Text style={styles.forgot}>Sign Up</Text>
                         </TouchableOpacity>
-                    
+                        
                 </View>
             </View>
         </Animatable.View>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         borderRadius: 50,
         borderWidth: 1,
-        borderColor: '#17f2de'
+        borderColor: '#6c63ff'
     },
     cardSeparator: {
         width: 250,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     btn: {
-        backgroundColor: '#17f2de',
+        backgroundColor: '#6c63ff',
         width: 150,
         height: 50,
         borderRadius: 50,
@@ -139,7 +139,8 @@ const styles = StyleSheet.create({
     },
     btnText: {
         fontSize: 17,
-        fontWeight: '600'
+        fontWeight: '600',
+        color: '#FFF'
     },
     footer: {
         height: 40,
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
     },
     forgot: {
         fontSize: 15,
-        color: '#17f2de',
+        color: '#6c63ff',
         fontWeight: '600'
     }
 })

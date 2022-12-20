@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         borderRadius: 15,
         borderWidth: 1,
-        borderColor: '#17f2de'
+        borderColor: '#6c63ff'
     },
     cardSeparator: {
         width: 320,
