@@ -18,7 +18,7 @@ export default function Home(){
                 </View>
                 <View style={styles.containerRegister}>
                     <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/mensagem.png')} style={{width: 40, height: 40}}/>
+                        <Image source={require('../../../assets/mensagem.png')} style={styles.imgInput}/>
                         <View style={styles.cardSeparator}>
                             <Text style={styles.titleSeparator}>Email</Text>
                             <TextInput
@@ -30,7 +30,7 @@ export default function Home(){
                         
                     </View>
                     <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/lock.png')} style={{width: 40, height: 40}}/>
+                        <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
                         <View style={styles.cardSeparator}>
                             <Text style={styles.titleSeparator}>Password</Text>
                             <TextInput
@@ -107,6 +107,10 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#6c63ff'
     },
+    imgInput: {
+        width: 30, 
+        height: 30
+    },
     cardSeparator: {
         width: 250,
         height: '100%',
@@ -151,5 +155,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: '#6c63ff',
         fontWeight: '600'
-    }
+    },
+    
 })

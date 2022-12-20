@@ -8,14 +8,14 @@ import * as Animatable from 'react-native-animatable';
 export default function Login(){
     const navigation = useNavigation();
     return(
-        <View style={{alignItems: 'center', justifyContent: 'center', flex: 1, backgroundColor: 'rgba(12,10,18,0.9)'}}>
+        <View style={styles.content}>
             <Animatable.View
                 animation="fadeInLeft" delay={500}
-                style={{width: '100%', justifyContent: 'space-between', flex: 1}}
+                style={styles.containerAnimation}
             >
                
                 <View style={styles.container}>
-                    <Image source={require('../../../assets/ranger.png')} style={{width: 40, height: 40}}/>
+                    <Image source={require('../../../assets/ranger.png')} style={styles.userImg}/>
                     <Text style={styles.username}>Alex Matheus</Text>
                 </View>
                 <View
@@ -42,6 +42,17 @@ export default function Login(){
 }
 
 const styles = StyleSheet.create({
+    content: {
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        flex: 1, 
+        backgroundColor: 'rgba(12,10,18,0.9)'
+    },
+    containerAnimation: {
+        width: '100%', 
+        justifyContent: 'space-between', 
+        flex: 1
+    },
     container: {
         width: '100%',
         height: 50,
@@ -50,6 +61,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderBottomWidth: 1,
         borderBottomColor: 'gray'
+    },
+    userImg: {
+        width: 40, 
+        height: 40
     },
     username: {
         fontSize: 20,

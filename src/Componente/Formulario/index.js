@@ -8,7 +8,7 @@ export default function Formulario({
 }){
     return(
         <View style={styles.cardRegister}>
-            <Image source={imagem} style={{width: 40, height: 40}}/>
+            <Image source={imagem} style={styles.imgInput}/>
             <View style={styles.cardSeparator}>
                 <Text style={styles.titleSeparator}>{title}</Text>
                 <TextInput
@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         borderWidth: 1,
         borderColor: '#6c63ff'
+    },
+    imgInput: {
+        width: 30, 
+        height: 30
     },
     cardSeparator: {
         width: 320,

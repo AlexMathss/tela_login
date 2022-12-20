@@ -14,7 +14,7 @@ export default function Create(){
         <Animatable.View animation="fadeInLeft" style={styles.container}>
             <View style={styles.backIcon}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btnBack}>
-                    <Image source={require('../../../assets/arrowp.png')} style={{width: 40, height: 40}}/>
+                    <Image source={require('../../../assets/arrowp.png')} style={styles.btnImg}/>
                 </TouchableOpacity>
             </View>
 
@@ -40,7 +40,7 @@ export default function Create(){
                         imagem={require('../../../assets/mensagem.png')}
                     />
                     <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/lock.png')} style={{width: 40, height: 40}}/>
+                        <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
                         <View style={styles.cardSeparator}>
                             <Text style={styles.titleSeparator}>Password</Text>
                             <TextInput
@@ -51,7 +51,7 @@ export default function Create(){
                         </View>
                     </View>
                     <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/lock.png')} style={{width: 40, height: 40}}/>
+                        <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
                         <View style={styles.cardSeparator}>
                             <Text style={styles.titleSeparator}>Confirm Password</Text>
                             <TextInput
@@ -85,6 +85,14 @@ const styles = StyleSheet.create({
         backgroundColor:'rgba(12,10,18,0.9)',
         alignItems: 'center',
         justifyContent: 'space-between'
+    },
+    btnImg: {
+        width: 40, 
+        height: 40
+    },
+    imgInput: {
+        width: 30, 
+        height: 30
     },
     cardRegister: {
         height: 60,
