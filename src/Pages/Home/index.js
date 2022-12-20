@@ -1,9 +1,8 @@
 import React from "react";
-import { TouchableOpacity, View, Text, StyleSheet, Image, TextInput, KeyboardAvoidingView, Pressable, TouchableWithoutFeedback, Keyboard } from "react-native";
+import { TouchableOpacity, View, Text, StyleSheet, Image, TextInput, KeyboardAvoidingView } from "react-native";
 import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from "@react-navigation/native";
-import ModalComp from "../../Componente/ModalComp";
 import Confirm from "../../Componente/Confirm";
 
 export default function Home(){
@@ -11,58 +10,57 @@ export default function Home(){
     return(
         <Animatable.View animation="fadeInUp" delay={600}>
             <KeyboardAvoidingView style={styles.container} behavior="padding">
-        
-            <Image source={require('../../../assets/loginbg.png')} style={styles.cardImg}/>
-            <View style={styles.containerCadastro}>
-                <View style={styles.containerTitle}>
-                    <Text style={styles.title}>Login</Text>
-                    <Text style={styles.sub}>Please fill the input below here</Text>
-                </View>
-                <View style={styles.containerRegister}>
-                    <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/mensagem.png')} style={styles.imgInput}/>
-                        <View style={styles.cardSeparator}>
-                            <Text style={styles.titleSeparator}>Email</Text>
-                            <TextInput
-                                style={styles.inputEmail}
-                                placeholder="user123@gmail.com"
-                                placeholderTextColor="#FFF"
-                            />
+                <Image source={require('../../../assets/loginbg.png')} style={styles.cardImg}/>
+                <View style={styles.containerCadastro}>
+                    <View style={styles.containerTitle}>
+                        <Text style={styles.title}>Login</Text>
+                        <Text style={styles.sub}>Please fill the input below here</Text>
+                    </View>
+                    <View style={styles.containerRegister}>
+                        <View style={styles.cardRegister}>
+                            <Image source={require('../../../assets/mensagem.png')} style={styles.imgInput}/>
+                            <View style={styles.cardSeparator}>
+                                <Text style={styles.titleSeparator}>Email</Text>
+                                <TextInput
+                                    style={styles.inputEmail}
+                                    placeholder="user123@gmail.com"
+                                    placeholderTextColor="#FFF"
+                                />
+                            </View>
+                            
                         </View>
                         
+                        <View style={styles.cardRegister}>
+                            <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
+
+                            <View style={styles.cardSeparator}>
+                                <Text style={styles.titleSeparator}>Password</Text>
+                                <TextInput
+                                    style={styles.inputEmail}
+                                    placeholder="Password"
+                                    secureTextEntry={true}
+                                    placeholderTextColor="#FFF"
+                                />
+                            </View>
+                        </View>           
                     </View>
                     
-                    <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
-
-                        <View style={styles.cardSeparator}>
-                            <Text style={styles.titleSeparator}>Password</Text>
-                            <TextInput
-                                style={styles.inputEmail}
-                                placeholder="Password"
-                                secureTextEntry={true}
-                                placeholderTextColor="#FFF"
-                            />
-                        </View>
-                    </View>           
-                </View>
-                
-                <View style={styles.loginButton}>
-                    
-                        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
-                            <Text style={styles.btnText}>LOGIN</Text>
-                        </TouchableOpacity>
-                    
-                    <Confirm/>
-                </View>
-                <View style={styles.footer}>
-                    <Text style={[styles.forgot, {fontSize: 15, color: '#FFF'}]}>Don't have an account?</Text>
-                        <TouchableOpacity onPress={() => navigation.navigate('Create')}>
-                            <Text style={styles.forgot}>Sign Up</Text>
-                        </TouchableOpacity>
+                    <View style={styles.loginButton}>
                         
+                            <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
+                                <Text style={styles.btnText}>LOGIN</Text>
+                            </TouchableOpacity>
+                        
+                        <Confirm/>
+                    </View>
+                    <View style={styles.footer}>
+                        <Text style={[styles.forgot, {fontSize: 15, color: '#FFF'}]}>Don't have an account?</Text>
+                            <TouchableOpacity onPress={() => navigation.navigate('Create')}>
+                                <Text style={styles.forgot}>Sign Up</Text>
+                            </TouchableOpacity>
+                            
+                    </View>
                 </View>
-            </View>
             </KeyboardAvoidingView>
         </Animatable.View>
     )

@@ -11,71 +11,71 @@ export default function Create(){
     const navigation = useNavigation();
     return(
         <View style={{backgroundColor: 'rgba(12,10,18,0.9)'}}>
-        <Animatable.View animation="fadeInLeft" >
-        <KeyboardAvoidingView style={styles.container} behavior='padding'>
-            <View style={styles.backIcon}>
-                <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btnBack}>
-                    <Image source={require('../../../assets/arrowp.png')} style={styles.btnImg}/>
-                </TouchableOpacity>
-            </View>
+            <Animatable.View animation="fadeInLeft" >
+                <KeyboardAvoidingView style={styles.container} behavior='padding'>
+                    <View style={styles.backIcon}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.btnBack}>
+                            <Image source={require('../../../assets/arrowp.png')} style={styles.btnImg}/>
+                        </TouchableOpacity>
+                    </View>
 
-            <View style={styles.form}>
-                <View style={styles.title}>
-                    <Text style={styles.titleText}>Create Account</Text>
-                    <Text style={styles.subTitle}>Please fill the input below here</Text>
-                </View>
-                <View style={styles.inputs}>
-                    <Formulario
-                        title={'Full name'}
-                        place={'Alex Matheus de Paula'}
-                        imagem={require('../../../assets/perfil.png')}
-                    />
-                    <Formulario
-                        title={'Phone'}
-                        place={'(**) 90000-0000'}
-                        imagem={require('../../../assets/smart.png')}
-                    />
-                    <Formulario
-                        title={'Email'}
-                        place={'exeplo@exemplo.com.br'}
-                        imagem={require('../../../assets/mensagem.png')}
-                    />
-                    <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
-                        <View style={styles.cardSeparator}>
-                            <Text style={styles.titleSeparator}>Password</Text>
-                            <TextInput
-                                style={styles.inputEmail}
-                                placeholder='********'
-                                placeholderTextColor="#FFF"
+                    <View style={styles.form}>
+                        <View style={styles.title}>
+                            <Text style={styles.titleText}>Create Account</Text>
+                            <Text style={styles.subTitle}>Please fill the input below here</Text>
+                        </View>
+                        <View style={styles.inputs}>
+                            <Formulario
+                                title={'Full name'}
+                                place={'Alex Matheus de Paula'}
+                                imagem={require('../../../assets/perfil.png')}
                             />
+                            <Formulario
+                                title={'Phone'}
+                                place={'(**) 90000-0000'}
+                                imagem={require('../../../assets/smart.png')}
+                            />
+                            <Formulario
+                                title={'Email'}
+                                place={'exeplo@exemplo.com.br'}
+                                imagem={require('../../../assets/mensagem.png')}
+                            />
+                            <View style={styles.cardRegister}>
+                                <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
+                                <View style={styles.cardSeparator}>
+                                    <Text style={styles.titleSeparator}>Password</Text>
+                                    <TextInput
+                                        style={styles.inputEmail}
+                                        placeholder='********'
+                                        placeholderTextColor="#FFF"
+                                    />
+                                </View>
+                            </View>
+                            <View style={styles.cardRegister}>
+                                <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
+                                <View style={styles.cardSeparator}>
+                                    <Text style={styles.titleSeparator}>Confirm Password</Text>
+                                    <TextInput
+                                        style={styles.inputEmail}
+                                        placeholder='********'
+                                        placeholderTextColor="#FFF"
+                                    />
+                                </View>
+                            </View>
+                        </View>
+                        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
+                            <Text style={styles.btnText}>SIGN UP</Text>
+                        </TouchableOpacity>
+                        <View style={styles.footer}>
+                            <Text style={[styles.forgot, {fontSize: 15, color: '#FFF'}]}>Already hava a acoount? </Text>
+                            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                                <Text style={styles.forgot}>Sign In</Text>
+                            </TouchableOpacity>
+                            
                         </View>
                     </View>
-                    <View style={styles.cardRegister}>
-                        <Image source={require('../../../assets/lock.png')} style={styles.imgInput}/>
-                        <View style={styles.cardSeparator}>
-                            <Text style={styles.titleSeparator}>Confirm Password</Text>
-                            <TextInput
-                                style={styles.inputEmail}
-                                placeholder='********'
-                                placeholderTextColor="#FFF"
-                            />
-                        </View>
-                    </View>
-                </View>
-                <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
-                    <Text style={styles.btnText}>SIGN UP</Text>
-                </TouchableOpacity>
-                <View style={styles.footer}>
-                    <Text style={[styles.forgot, {fontSize: 15, color: '#FFF'}]}>Already hava a acoount? </Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                        <Text style={styles.forgot}>Sign In</Text>
-                    </TouchableOpacity>
-                    
-                </View>
-            </View>
-        </KeyboardAvoidingView>
-        </Animatable.View>
+                </KeyboardAvoidingView>
+            </Animatable.View>
         </View>
     )
 }
